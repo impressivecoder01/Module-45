@@ -10,10 +10,23 @@ const BookDetails = () => {
     console.log(singleBook)
     const {publisher,review,image,author,bookName} = singleBook
     return (
-        <div>
-            <h1>{publisher}</h1>
-            <img src={image} alt="" />
-        </div>
+        <div className="card card-side bg-base-100 my-4 shadow-sm">
+  <figure>
+    <img
+      src={image}
+      alt="Movie" />
+  </figure>
+  <div className="card-body">
+    <h1 className="text-2xl">{author}</h1>
+    <p className="text-2xl">{bookName}</p>
+    <h2 className="card-title">{publisher}</h2>
+    <p>{review}</p>
+    <div className="card-actions justify-end">
+      <button className='btn btn-primary'>Read</button>
+      <button className='btn btn-primary'>WishList</button>
+    </div>
+  </div>
+</div>
     );
 };
 
