@@ -8,6 +8,13 @@ const BookDetails = () => {
     const data = useLoaderData()
     const singleBook  = data.find(book=> book.bookId === bookId)
     console.log(singleBook)
+    const handleMarkAsRead = id => {
+      // store with id
+      // where to store 
+      // array of collection
+      // if data is already exist then show a alert
+      // if book not exist then push in the collection or array
+    }
     const {publisher,review,image,author,bookName} = singleBook
     return (
         <div className="card card-side bg-base-100 my-4 shadow-sm">
@@ -22,8 +29,8 @@ const BookDetails = () => {
     <h2 className="card-title">{publisher}</h2>
     <p>{review}</p>
     <div className="card-actions justify-end">
-      <button className='btn btn-primary'>Read</button>
-      <button className='btn btn-primary'>WishList</button>
+      <button onClick={()=>handleMarkAsRead(id)} className='btn btn-primary'>Mark as read</button>
+      <button className='btn btn-primary'>Add to wishList</button>
     </div>
   </div>
 </div>
