@@ -1,6 +1,7 @@
 import { Star } from 'lucide-react';
 import React from 'react';
 import { useLoaderData, useParams } from 'react-router';
+import { addToStoreDB } from '../../utility/addtoDB';
 
 const BookDetails = () => {
     const {id} = useParams()
@@ -14,6 +15,7 @@ const BookDetails = () => {
       // array of collection
       // if data is already exist then show a alert
       // if book not exist then push in the collection or array
+      addToStoreDB(id)
     }
     const {publisher,review,image,author,bookName} = singleBook
     return (
