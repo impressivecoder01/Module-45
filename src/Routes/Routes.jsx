@@ -30,6 +30,7 @@ export const router = createBrowserRouter([
         },
         {
           path: 'readList',
+          loader: ()=> fetch('data.json'),
           Component: ReadList
         }
     ]
